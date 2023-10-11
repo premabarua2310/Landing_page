@@ -43,15 +43,17 @@ const Navbar = () => {
     <header className='w-full bg-white md:bg-transparent fixed top-0 left-0 right-0'>
       <nav className={`py-4 lg:px-14 px-4 ${isSticky ? "sticky top-0 left-0 right-0 border bg-white duration-300" : ""}`}>
         <div className='flex justify-between items-center text-base gap-8'>
-          <a href="" className='text-2xl font-semibold flex items-center space-x-3'><img src={logo} alt="logo" className='w-10 inline-block items-center' />
-            <span className='text-[#263238]'></span>NEXTCENT</a>
+          <a href="" className='text-2xl font-semibold flex items-center space-x-3'>
+            <img src={logo} alt="logo" className='w-10 inline-block items-center' />
+            <span className='text-[#263238]'></span>NEXTCENT
+          </a>
 
           {/* nav items for large device */}
           <ul className='md:flex space-x-12 hidden'>
             {
-              navItems.map(({ link, path }) => <Link to={path} spy={true} smooth={true} offset={-100} key={path} className='block text-base text-grey900
+              navItems.map(({ link, path }) => <Link to={path} spy={true} smooth={true} offset={-100} key={path} className='block cursor-pointer text-base text-grey900
                hover:text-brandPrimary first:font-medium'>{link}</Link>)
-            }
+            } 
           </ul>
 
           {/* nav items for large device */}
@@ -81,10 +83,8 @@ const Navbar = () => {
         </div>
       </nav>
 
-
     </header>
   )
 }
 
 export default Navbar
- 
